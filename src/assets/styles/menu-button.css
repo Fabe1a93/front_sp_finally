@@ -1,0 +1,14 @@
+.menu-button {
+	border-radius: 50%;
+	border: none;
+	background: white;
+	position: absolute;
+	width: 3rem;
+	height: 3rem
+}
+
+.menu-button img {
+	position: relative;
+	width: 100%;
+	height: 100%
+}

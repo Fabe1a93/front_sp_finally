@@ -1,0 +1,14 @@
+(node:11352) ExperimentalWarning: The Fetch API is an experimental feature. This feature could change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+TypeError: fetch failed
+    at Object.fetch (node:internal/deps/undici/undici:11118:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  cause: Error: connect ECONNREFUSED ::1:3001
+      at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1300:16) {
+    errno: -4078,
+    code: 'ECONNREFUSED',
+    syscall: 'connect',
+    address: '::1',
+    port: 3001
+  }
+}
