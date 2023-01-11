@@ -15,53 +15,54 @@ export default function Aqm() {
 
   
 
+  
   let areas = [
     {
       text: "PKG",
-      link: "/"
+      link: "../Pkg"
     },
     {
       text: "MiniDollar",
-      link: "/"
+      link: "../MiniDollar"
     },
     {
       text: "Kitting",
-      link: "/"
+      link: "../Kitting"
     },
     {
       text: "Ctrl Inventory",
-      link: "/"
+      link: "../Ctrl Inventory"
     },
     {
       text: "Head Count",
-      link: "/"
+      link: "../Head Count"
     },
   ]
 
   let criticalAreas = [
     {
       text: "Manual Pull",
-      link: "/"
+      link: "../Manual Pull"
     },
     {
       text: "Planares Modular",
-      link: "/"
+      link: "../Planares Modular"
     },
     {
       text: "Excess 410/420",
-      link: "/"
+      link: "../Excess410420"
     },
     {
       text: "Swap",
-      link: "/"
+      link: "../Swap"
     },
     {
       text: "AQM",
-      link: "/"
+      link: "../Aqm"
     },
     {
       text: "MRSP",
-      link: "/"
+      link: "../Msrp"
     }
   ]
 
@@ -106,10 +107,10 @@ export default function Aqm() {
           }
         </div>
 
-        <div className='Contenidodollargraf'>
+        <div className='Contenidodollargraf extcon'>
         <h4 className='tituloh4' >Aqm</h4>
           <div className='row'>
-            <div className='col-md-12 pt-4'>
+            <div className='col-md-12 pt-4 ml-4'>
             
             <iframe src='//charts.hohli.com/embed.html?created=1671568398754#w=640&h=480&d={"containerId":"chart","dataTable":{"cols":[{"label":"A","type":"string","p":{}},{"label":"Genre","type":"number","p":{}},{"label":"Serie","type":"number"}],"rows":[{"c":[{"v":"5/26/2022"},{"v":205000},{"v":270000}]},{"c":[{"v":"5/27/2022"},{"v":260000},{"v":270000}]},{"c":[{"v":"5/28/2022"},{"v":230000},{"v":270000}]},{"c":[{"v":"5/29/2022"},{"v":270000},{"v":270000}]},{"c":[{"v":"5/30/2022"},{"v":160000},{"v":270000}]},{"c":[{"v":"6/01/2022"},{"v":180000},{"v":270000}]},{"c":[{"v":"6/02/2022"},{"v":null},{"v":270000}]},{"c":[{"v":"6/03/2022"},{"v":null},{"v":270000}]},{"c":[{"v":"6/04/2022"},{"v":null},{"v":270000}]},{"c":[{"v":"6/05/2022"},{"v":null},{"v":270000}]},{"c":[{"v":"6/06/2022"},{"v":null},{"v":270000}]},{"c":[{"v":"6/07/2022"},{"v":null},{"v":270000}]}]},"options":{"hAxis":{"useFormatFromData":true,"titleTextStyle":{"color":"#434343","fontSize":12,"italic":true},"viewWindow":{"max":null,"min":null},"minValue":null,"maxValue":null},"legacyScatterChartLabels":true,"legend":"right","legendTextStyle":{"color":"#666666","fontSize":12},"useFirstColumnAsDomain":false,"vAxes":[{"title":null,"minValue":null,"maxValue":null,"viewWindow":{"max":null,"min":null},"useFormatFromData":true},{"viewWindow":{"max":null,"min":null},"minValue":null,"maxValue":null,"useFormatFromData":true}],"type":"line","booleanRole":"certainty","series":[{"type":"bars","color":"#38761d"}],"width":640,"height":480},"state":{},"view":{"columns":null,"rows":null},"isDefaultVisualization":false,"chartType":"ComboChart"}' frameborder='0' width='650' height='490'></iframe>
      

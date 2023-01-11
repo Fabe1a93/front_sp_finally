@@ -10,50 +10,54 @@ export default function Registerswap() {
 
 	const [registerArea, setRegisterArea] = useState(false);
 
-	let areas = [
+	
+  let areas = [
     {
       text: "PKG",
-      link: "Pkg"
+      link: "../Pkg"
     },
     {
       text: "MiniDollar",
-      link: "MiniDollar"
+      link: "../MiniDollar"
     },
     {
       text: "Kitting",
-      link: "Kitting"
+      link: "../Kitting"
     },
     {
       text: "Ctrl Inventory",
-      link: "Ctrl Inventory"
+      link: "../Ctrl Inventory"
     },
     {
       text: "Head Count",
-      link: "Head Count"
+      link: "../Head Count"
     },
   ]
 
   let criticalAreas = [
     {
-      text:"Manual Pull",
-      link: "Manual Pull"
+      text: "Manual Pull",
+      link: "../Manual Pull"
     },
     {
-      text:"Planares Modular",
-      link: "Planares Modular"
+      text: "Planares Modular",
+      link: "../Planares Modular"
     },
     {
-      text:"Excess 410/420",
-      link: "Excess 410/420"
+      text: "Excess 410/420",
+      link: "../Excess410420"
     },
-    {text: "Swap",
-      link: "Principalbtnswap"
+    {
+      text: "Swap",
+      link: "../Swap"
     },
-    {text: "AQM",
-      link: "Aqm"
+    {
+      text: "AQM",
+      link: "../Aqm"
     },
-    {text: "MRSP",
-      link: "Mrsp"
+    {
+      text: "MRSP",
+      link: "../Msrp"
     }
   ]
 	

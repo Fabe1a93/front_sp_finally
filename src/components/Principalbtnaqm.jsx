@@ -19,53 +19,54 @@ export default function Principalbtnaqm() {
 
   
 
+  
   let areas = [
     {
       text: "PKG",
-      link: "/"
+      link: "../Pkg"
     },
     {
       text: "MiniDollar",
-      link: "/"
+      link: "../MiniDollar"
     },
     {
       text: "Kitting",
-      link: "/"
+      link: "../Kitting"
     },
     {
       text: "Ctrl Inventory",
-      link: "/"
+      link: "../Ctrl Inventory"
     },
     {
       text: "Head Count",
-      link: "/"
+      link: "../Head Count"
     },
   ]
 
   let criticalAreas = [
     {
       text: "Manual Pull",
-      link: "/"
+      link: "../Manual Pull"
     },
     {
       text: "Planares Modular",
-      link: "/"
+      link: "../Planares Modular"
     },
     {
       text: "Excess 410/420",
-      link: "/"
+      link: "../Excess410420"
     },
     {
       text: "Swap",
-      link: "/"
+      link: "../Swap"
     },
     {
       text: "AQM",
-      link: "/"
+      link: "../Aqm"
     },
     {
       text: "MRSP",
-      link: "/"
+      link: "../Msrp"
     }
   ]
 

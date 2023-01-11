@@ -10,55 +10,58 @@ export function OptionsMain() {
 
 	const [registerArea, setRegisterArea] = useState(false);
 
-	let areas = [
+  let areas = [
     {
       text: "PKG",
-      link: "Pkg"
+      link: "../Pkg"
     },
     {
       text: "MiniDollar",
-      link: "MiniDollar"
+      link: "../MiniDollar"
     },
     {
       text: "Kitting",
-      link: "Kitting"
+      link: "../Kitting"
     },
     {
       text: "Ctrl Inventory",
-      link: "Ctrl Inventory"
+      link: "../Ctrl Inventory"
     },
     {
       text: "Head Count",
-      link: "Head Count"
+      link: "../Head Count"
     },
   ]
 
   let criticalAreas = [
     {
-      text:"Manual Pull",
-      link: "Manualpullreg"
+      text: "Manual Pull",
+      link: "../Manual Pull"
     },
     {
-      text:"Planares Modular",
-      link: "PlanaresModularreg"
+      text: "Planares Modular",
+      link: "../Planares Modular"
     },
     {
-      text:"Excess 410/420",
-      link: "Excessreg"
+      text: "Excess 410/420",
+      link: "../Excess410420"
     },
-    {text: "Swap",
-      link: "Principalbtnswap"
+    {
+      text: "Swap",
+      link: "../Swap"
     },
-    {text: "AQM",
-      link: "Principalbtnaqm"
+    {
+      text: "AQM",
+      link: "../Aqm"
     },
-    {text: "MRSP",
-      link: "Msrpreg"
+    {
+      text: "MRSP",
+      link: "../Msrp"
     }
   ]
 	
 	return (
-		<div className="d-flex row">
+		<div className="d-flex row" >
 			{
 				!sideBar &&
 				<>
@@ -67,6 +70,7 @@ export function OptionsMain() {
 						<div style={{"height": "86%"}}></div>
 						<SecButton content='Sign Out'/>
 					</div>
+           
 				</>
 			}
 			<div className="position-relative">
@@ -95,7 +99,9 @@ export function OptionsMain() {
 						</DropdownAreas>
 					</>
 				}
+       
 			</div>
+      
 		</div>
 	)
 }

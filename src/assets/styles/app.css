@@ -73,6 +73,17 @@ footer {
 
 }
 
+.Contenidodollargraf{
+  position: absolute;
+  background-color: white;
+  height: 40vw;
+  width: 50%;
+  top: 25%;
+  left: 25%;
+  
+  
+}
+
 .Contenidodollargrafc{
   position: absolute;
   background-color: white;
@@ -80,6 +91,7 @@ footer {
   width: 50%;
   top: 25%;
   left: 25%;
+  
   
 }
 
@@ -637,4 +649,8 @@ tbody tr td {
 
 #basic-addon1{
   height: 48px;
+}
+
+.extcon{
+
 }

@@ -12,27 +12,55 @@ export default function Principalbtnswap() {
 
 	const [registerArea, setRegisterArea] = useState(true);
 
-	let areas = [
+	
+  let areas = [
     {
       text: "PKG",
-      link: "/"
+      link: "../Pkg"
     },
     {
       text: "MiniDollar",
-      link: "/"
+      link: "../MiniDollar"
     },
     {
       text: "Kitting",
-      link: "/"
+      link: "../Kitting"
     },
     {
       text: "Ctrl Inventory",
-      link: "/"
+      link: "../Ctrl Inventory"
     },
     {
       text: "Head Count",
-      link: "/"
+      link: "../Head Count"
     },
+  ]
+
+  let criticalAreas = [
+    {
+      text: "Manual Pull",
+      link: "../Manual Pull"
+    },
+    {
+      text: "Planares Modular",
+      link: "../Planares Modular"
+    },
+    {
+      text: "Excess 410/420",
+      link: "../Excess410420"
+    },
+    {
+      text: "Swap",
+      link: "../Swap"
+    },
+    {
+      text: "AQM",
+      link: "../Aqm"
+    },
+    {
+      text: "MRSP",
+      link: "../Msrp"
+    }
   ]
 
   
@@ -51,29 +79,7 @@ export default function Principalbtnswap() {
     },
   ]
 
-  let criticalAreas = [
-    {
-      text:"Manual Pull",
-      link: "/"
-    },
-    {
-      text:"Planares Modular",
-      link: "/"
-    },
-    {
-      text:"Excess 410/420",
-      link: "/"
-    },
-    {text: "Swap",
-      link: "/"
-    },
-    {text: "AQM",
-      link: "/"
-    },
-    {text: "MRSP",
-      link: "/"
-    }
-  ]
+  
 	
 	return (
 		<div className="d-flex row">

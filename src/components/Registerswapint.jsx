@@ -10,20 +10,56 @@ export  default function Registerswapint() {
 
 	const [registerArea, setRegisterArea] = useState(true);
 
+	
 	let areas = [
-    {
-      text: "Inventory",
-      link: "Inventory"
-    },
-    {
-      text: "Wh / Repair",
-      link: "Repairregister"
-    },
-    {
-      text: "Failure",
-      link: "Failureregister"
-    },    
-  ]
+		{
+		  text: "PKG",
+		  link: "../Pkg"
+		},
+		{
+		  text: "MiniDollar",
+		  link: "../MiniDollar"
+		},
+		{
+		  text: "Kitting",
+		  link: "../Kitting"
+		},
+		{
+		  text: "Ctrl Inventory",
+		  link: "../Ctrl Inventory"
+		},
+		{
+		  text: "Head Count",
+		  link: "../Head Count"
+		},
+	  ]
+	
+	  let criticalAreas = [
+		{
+		  text: "Manual Pull",
+		  link: "../Manual Pull"
+		},
+		{
+		  text: "Planares Modular",
+		  link: "../Planares Modular"
+		},
+		{
+		  text: "Excess 410/420",
+		  link: "../Excess410420"
+		},
+		{
+		  text: "Swap",
+		  link: "../Swap"
+		},
+		{
+		  text: "AQM",
+		  link: "../Aqm"
+		},
+		{
+		  text: "MRSP",
+		  link: "../Msrp"
+		}
+	  ]
 
   
 	

@@ -9,53 +9,56 @@ export function OptionsGrafics() {
 	const [sideBar, setSideBar] = useState(true);
 
 	const [registerArea, setRegisterArea] = useState(false);
-
-	let areas = [
+  let areas = [
     {
       text: "PKG",
-      link: "Pkggraf"
+      link: "../Pkg"
     },
     {
       text: "MiniDollar",
-      link: "MiniDollargraf"
+      link: "../MiniDollar"
     },
     {
       text: "Kitting",
-      link: "Kittingraf"
+      link: "../Kitting"
     },
     {
       text: "Ctrl Inventory",
-      link: "Controlinventorygraf"
+      link: "../Ctrl Inventory"
     },
     {
       text: "Head Count",
-      link: "Headcountgraf"
+      link: "../Head Count"
     },
   ]
 
   let criticalAreas = [
     {
-      text:"Manual Pull",
-      link: "Manual Pull"
+      text: "Manual Pull",
+      link: "../Manual Pull"
     },
     {
-      text:"Planares Modular",
-      link: "Planares Modular"
+      text: "Planares Modular",
+      link: "../Planares Modular"
     },
     {
-      text:"Excess 410/420",
-      link: "Excess410420"
+      text: "Excess 410/420",
+      link: "../Excess410420"
     },
-    {text: "Swap",
-      link: "Principalbtnswapgraf"
+    {
+      text: "Swap",
+      link: "../Swap"
     },
-    {text: "AQM",
-      link: "Principalbtnaqm"
+    {
+      text: "AQM",
+      link: "../Aqm"
     },
-    {text: "MRSP",
-      link: "Msrp"
+    {
+      text: "MRSP",
+      link: "../Msrp"
     }
   ]
+	
 	
 	return (
 		<div className="d-flex row">

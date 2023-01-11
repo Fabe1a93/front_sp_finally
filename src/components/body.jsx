@@ -13,16 +13,17 @@ const Body = () => {
 
   
 
-
+  
+    
    return (
     <>
-    <div className='principal-body'>
+    <div className='principal-body' >
+  
 
 
-
-     <a href="/register-options/" ><PrincipalButton src={buttonOne} alt='button 1' /></a>
+     <a href="/register-options" ><PrincipalButton src={buttonOne} alt='button 1' /></a>
      
-     <a href="/options-grafics/"><PrincipalButton src={buttonTwo} alt='button 2' /></a>
+     <a href="/options-grafics"><PrincipalButton src={buttonTwo} alt='button 2' /></a>
 
      
      <a href='/options-staff'><img src={buttonTree} alt='button 3' style={{ height: '5vw', width:'5vw', position:'absolute', right:'1vw', top: '39vw' }}/></a>
@@ -31,5 +32,6 @@ const Body = () => {
     </>
   );
 }
+
 
 export default Body

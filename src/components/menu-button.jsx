@@ -1,4 +1,6 @@
-import menuIcon from '../assets/static/buttonMenu.png'
+import React from 'react';
+import menuIcon from '../assets/static/buttonMenu.png';
+
 import '../assets/styles/menu-button.css';
 
 const MenuButton = ({onclickFunction, value}) => {
