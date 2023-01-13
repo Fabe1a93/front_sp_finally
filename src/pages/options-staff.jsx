@@ -1,4 +1,4 @@
-import React, { useRef,useState } from 'react';
+import React, { useRef,useState,useEffect } from 'react';
 
 import { MenuButton } from '../components/menu-button'
 import { SecButton } from '../components/sec-button';
@@ -10,43 +10,50 @@ import '../assets/styles/app.css';
 const URL_LOGIN = "http://localhost/ws-login/login.php";
 
 
-const URL_USERS = "http://localhost:3001/api/v1/users/";
+const URL_USERS = "http://localhost:3000/api/v1/users/";
    
    
-const URL_CONSULTA = "http://localhost:3001/api/v1/users";
+const URL_CONSULTA = "http://localhost:3000/api/v1/users/";
 
   
   
-  const URL_LOGINREC = 'http://localhost:3001/api/v1/users';  
+  const URL_LOGINREC = 'http://localhost:3000/api/v1/users';  
 
-
-  
-// Crear fetch
-fetch(URL_CONSULTA)
-.then(function(res) {
-    return res.json();
-})
-.then(function(data) {
- // console.log(data);
-  
+ 
+ 
  
 
 
-  for (const property in data) {
-    console.log(`${property}: ${data[property]}`);
-  }
+  
+
+  // const peticion = fetch(URL_CONSULTA);
+  
+  // peticion
+  // .then( resp => resp.json())
+  // .then ( ({ data }) => {
+
+  //   const respuestafin = data.rows;  
+  //   //  const { name } = data.rows[0].name;  
+  //   //const select = document.createElement('select');     
+  //   //select.value = data.rows[0].name;  
+  //   //document.body.append( select )
+
+  //   return respuestafin;
+
+    
+  // }) 
+  // .catch (console.warn);
+ 
+
   
 
 //  document.querySelector('#resultado').innerHTML = html;
 
-})
-.catch(function(error) {
-    console.log(error);
-})
-
 
 
   const enviarData = async ( url,datos) => {  
+
+    
     
     const {userref} = datos;
    
@@ -62,40 +69,64 @@ fetch(URL_CONSULTA)
                   'Content-Type': 'application/json'
               }
       });
-  
-      //console.log(resp);
+      
+     
+      
       const json = await resp.json();
 
       const passuser = json.data.password;
+
+      
 
       sessionStorage.setItem("username", json.data.name);
       sessionStorage.setItem("iduser", json.data.id);
      
 
-
       return passuser;
       
-     
-      
-         
-       
-          
+                   
     }
 
 
 
-
-
-
-
+   
 
 export function OptionsStaff() {
 	
 	const [sideBar, setSideBar] = useState(false);
 
 	const [registerArea, setRegisterArea] = useState(true);
+  
+
 
   
+
+  
+   const [valor, setValores] = useState(true);
+    
+  useEffect(() => {
+
+    fetch(URL_CONSULTA)
+    .then((response) => response.json())
+    .then((data) => {
+
+   
+   const total = data.data.count;
+   for(let i=0; i<total; i++){
+    $("#myselect").append("<option value='"+data.data.rows[i].id+"'>"+data.data.rows[i].name+"</option>");
+   }
+
+    
+      
+    });
+
+  }, []);
+  
+    
+  
+  
+
+
   const  refUsuario = useRef(null);
   const refClave = useRef(null);
  
@@ -107,13 +138,15 @@ export function OptionsStaff() {
     const data = {
       "userref" : refUsuario.current.value
   };
-  //console.log(data);
+  
 
 
     
   
   const respuestaJson= await enviarData(URL_LOGINREC,data);
- 
+  
+  
+  
 
 
   if (refClave.current.value == respuestaJson){    
@@ -215,14 +248,8 @@ export function OptionsStaff() {
                                 <span className="input-group-text" id="basic-addon1">
                                 👤 <strong>User: </strong>
                                 </span>
-                              
-                                <select ref={refUsuario}  className="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
-                               <option value="1">Staff User</option>
-                               <option value="9">roberto@gmail.com</option>
-                               <option value="10">daniel@gmail.com</option>
-                               <option value="11">Carlos</option>
-                               <option value="12">juanperez@gmail.com</option>
-                               <option value="13">laura@gmail.com</option>
+
+                                <select id="myselect" name="myselect" ref={refUsuario}  className="form-select form-select-lg mb-3" aria-label=".form-select-lg example">                            
                                 </select>
                                 {/* <input
                                     type="email"
