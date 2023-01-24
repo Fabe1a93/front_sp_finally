@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Areas } from '../components/areas';
 import { DropdownAreas } from '../components/areas-dropdown';
 import { MenuButton } from '../components/menu-button'
@@ -203,7 +204,7 @@ export default function Staffformulario() {
                             <button type='submit' className="btn btn-primary text-dark btn-sm btn-block"><strong>Cancel</strong></button>
                             
                              </div>  
-                             <a href="/options-staff">Ingrese a su cuenta</a>
+                             <Link to="../optionsstaff">Ingrese a su cuenta</Link>
 
 			</div>
 		</div>

@@ -1,7 +1,8 @@
 import React, {useRef} from 'react';
  import {
    Route,
-   Routes   
+   Routes,
+   Router   
  } from "react-router-dom";
 
 
@@ -15,7 +16,7 @@ import Header from "./header";
 import { OptionsMain } from "../pages/options-main";
 import { OptionsGrafics } from "../pages/options-grafics";
 import Body from "./body";
-// import Body from "./components/body";
+//import Body from "./components/body";
 import MiniDollar from "./Minidollar";
 import Pkg from "./Pkg";
 import Kitting from "./Kitting";
@@ -69,82 +70,94 @@ import Formulariouser from './formulariouser';
 
 
 
-const App = () => {
-  return (
-    <div className="h-1|00">
+// export default function App() {
+//   return (
+//     <Router>
+//       <div className="App">
+//           <Route exact path="/" component={<Body/>} />
+//           <Route path="/register-options" element={<OptionsMain/>} />
+//           <Route path="/options-grafics" element={<OptionsGrafics/>} />
+//       </div>
+//     </Router>
+//   );
+// }
+
+// const App = () => {
+//   return (
+//     <div className="h-1|00">
    
       
-     <Routes>
-      {/* <Header /> */}
-      <Route path="/" element={<Body/>} />
-      <Route path="/register-options" element={<OptionsMain/>} />
-      <Route path="/options-grafics" element={<OptionsGrafics/>} />
+//      <Routes>
+//       {/* <Header /> */}
+//       <Route path="/" element={<Body/>} />
+//       <Route path="/register-options" element={<OptionsMain/>} />
+//       <Route path="/options-grafics" element={<OptionsGrafics/>} />
      
 
       
-      <Route path="/register-options/MiniDollar" element={<MiniDollar/>} />
-      <Route path="/register-options/PKG" element={<Pkg/>} />
-      <Route path="/register-options/Kitting" element={<Kitting/>} />
-      <Route path="/register-options/Ctrl Inventory" element={<CtrlInventory/>} />
-      <Route path="/register-options/Head Count" element={<HeadCount/>} />
-      <Route path="/options-grafics/Manual Pull" element={<Manualpull/>} />
-      <Route path="/options-grafics/Planares Modular" element={<Planaresmodular/>} />
-      <Route path="/options-grafics/Excess410420" element={<Excess/>} />
-      <Route path="/register-options/Swap" element={<Swap/>} />
-      <Route path="/register-options/Aqm" element={<Aqm/>} />
-      <Route path="/options-grafics/Msrp" element={<Mrsp/>} />
-      <Route path="/register-options/Manualpullreg" element={<Manualpullreg/>} />
-      <Route path="/register-options/Planaresmodularreg" element={<Planaresmodularreg/>} />
-      <Route path="/options-grafics/Principalbtnaqm" element={<Principalbtnaqm/>} />
-      <Route path="/options-grafics/Principalbtnaqmdt" element={<Principalbtnaqmdt/>} />
-      <Route path="/register-options/Excessreg" element={<Excessreg/>} /> 
-      <Route path="/register-options/Msrpreg" element={<Msrpreg/>} /> 
-      <Route path="/register-options/Principalbtnswap" element={<Principalbtnswap/>} /> 
-      <Route path="/options-grafics/Principalbtnswapgraf" element={<Principalbtnswapgraf/>} /> 
-      <Route path="/options-grafics/Pkggraf" element={<Pkggraf/>} />  
+//       <Route path="/register-options/MiniDollar" element={<MiniDollar/>} />
+//       <Route path="/register-options/PKG" element={<Pkg/>} />
+//       <Route path="/register-options/Kitting" element={<Kitting/>} />
+//       <Route path="/register-options/Ctrl Inventory" element={<CtrlInventory/>} />
+//       <Route path="/register-options/Head Count" element={<HeadCount/>} />
+//       <Route path="/options-grafics/Manual Pull" element={<Manualpull/>} />
+//       <Route path="/options-grafics/Planares Modular" element={<Planaresmodular/>} />
+//       <Route path="/options-grafics/Excess410420" element={<Excess/>} />
+//       <Route path="/register-options/Swap" element={<Swap/>} />
+//       <Route path="/register-options/Aqm" element={<Aqm/>} />
+//       <Route path="/options-grafics/Msrp" element={<Mrsp/>} />
+//       <Route path="/register-options/Manualpullreg" element={<Manualpullreg/>} />
+//       <Route path="/register-options/Planaresmodularreg" element={<Planaresmodularreg/>} />
+//       <Route path="/options-grafics/Principalbtnaqm" element={<Principalbtnaqm/>} />
+//       <Route path="/options-grafics/Principalbtnaqmdt" element={<Principalbtnaqmdt/>} />
+//       <Route path="/register-options/Excessreg" element={<Excessreg/>} /> 
+//       <Route path="/register-options/Msrpreg" element={<Msrpreg/>} /> 
+//       <Route path="/register-options/Principalbtnswap" element={<Principalbtnswap/>} /> 
+//       <Route path="/options-grafics/Principalbtnswapgraf" element={<Principalbtnswapgraf/>} /> 
+//       <Route path="/options-grafics/Pkggraf" element={<Pkggraf/>} />  
 
       
       
-      <Route path="/targetswap" element={<Targetswap/>} /> 
-      <Route path="/targetaqm" element={<Targetaqm/>} /> 
-      <Route path="/registerswapint" element={<Registerswapint/>} /> 
-      <Route path="/registeraqmint" element={<Registeraqmint/>} /> 
-      <Route path="/register-options/swapchangetarget" element={<Swapchangetarget/>} /> 
-      <Route path="/register-options/swapchangetargetdt" element={<Swapchangetargetdt/>} /> 
-      <Route path="/register-options/Whrepairchangetarget" element={<Whrepairchangetarget/>} /> 
-      <Route path="/register-options/Whrepairchangetargetmb" element={<Whrepairchangetargetmb/>} /> 
-      <Route path="/register-options/Failurechangetarget" element={<Failurechangetarget/>} />  
-      <Route path="/register-options/Inventory" element={<Inventoryregister/>} /> 
-      <Route path="/register-options/Repairregister" element={<Repairregister/>} /> 
-      <Route path="/register-options/Failureregister" element={<Failureregister/>} /> 
-      <Route path="/register-options/Aqmchangetarget" element={<Aqmchangetarget/>} /> 
-      <Route path="/register-options/Aqmchangetargetdt" element={<Aqmchangetargetdt/>} /> 
-      <Route path="/register-options/Aqmregistro" element={<Aqmregistro/>} /> 
-      <Route path="/options-grafics/swapchangetargetgraf" element={<Swapchangetargetgraf/>} /> 
-      <Route path="/options-grafics/swapchangetargetgrafntb" element={<Swapchangetargetgrafntb/>} /> 
-      <Route path="/targetswapgraf" element={<Targetswapgraf/>} /> 
-      <Route path="/registerswapintgraf" element={<Registerswapintgraf/>} /> 
-      <Route path="/options-grafics/whrepairtarget" element={<Whrepairtarget/>} /> 
-      <Route path="/options-grafics/whrepairtargetmb" element={<Whrepairtargetmb/>} /> 
-      <Route path="/options-grafics/failuretarget" element={<Failuretarget/>} /> 
-      <Route path="/options-grafics/Kittingraf" element={<Kittingraf/>} /> 
-      <Route path="/options-grafics/MiniDollargraf" element={<MiniDollargraf/>} /> 
-      <Route path="/options-grafics/Controlinventorygraf" element={<Controlinventorygraf/>} /> 
-      <Route path="/options-grafics/Headcountgraf" element={<Headcountgraf/>} /> 
-      <Route path="/staff-principal" element={<Staffprincipal/>} /> 
-      <Route path="/staff-formulario" element={<Staffformulario/>} /> 
-      <Route path="/formulariouser" element={<Formulariouser/>} />
-      <Route path="/options-staff" element={<OptionsStaff/>} />
+//       <Route path="/targetswap" element={<Targetswap/>} /> 
+//       <Route path="/targetaqm" element={<Targetaqm/>} /> 
+//       <Route path="/registerswapint" element={<Registerswapint/>} /> 
+//       <Route path="/registeraqmint" element={<Registeraqmint/>} /> 
+//       <Route path="/register-options/swapchangetarget" element={<Swapchangetarget/>} /> 
+//       <Route path="/register-options/swapchangetargetdt" element={<Swapchangetargetdt/>} /> 
+//       <Route path="/register-options/Whrepairchangetarget" element={<Whrepairchangetarget/>} /> 
+//       <Route path="/register-options/Whrepairchangetargetmb" element={<Whrepairchangetargetmb/>} /> 
+//       <Route path="/register-options/Failurechangetarget" element={<Failurechangetarget/>} />  
+//       <Route path="/register-options/Inventory" element={<Inventoryregister/>} /> 
+//       <Route path="/register-options/Repairregister" element={<Repairregister/>} /> 
+//       <Route path="/register-options/Failureregister" element={<Failureregister/>} /> 
+//       <Route path="/register-options/Aqmchangetarget" element={<Aqmchangetarget/>} /> 
+//       <Route path="/register-options/Aqmchangetargetdt" element={<Aqmchangetargetdt/>} /> 
+//       <Route path="/register-options/Aqmregistro" element={<Aqmregistro/>} /> 
+//       <Route path="/options-grafics/swapchangetargetgraf" element={<Swapchangetargetgraf/>} /> 
+//       <Route path="/options-grafics/swapchangetargetgrafntb" element={<Swapchangetargetgrafntb/>} /> 
+//       <Route path="/targetswapgraf" element={<Targetswapgraf/>} /> 
+//       <Route path="/registerswapintgraf" element={<Registerswapintgraf/>} /> 
+//       <Route path="/options-grafics/whrepairtarget" element={<Whrepairtarget/>} /> 
+//       <Route path="/options-grafics/whrepairtargetmb" element={<Whrepairtargetmb/>} /> 
+//       <Route path="/options-grafics/failuretarget" element={<Failuretarget/>} /> 
+//       <Route path="/options-grafics/Kittingraf" element={<Kittingraf/>} /> 
+//       <Route path="/options-grafics/MiniDollargraf" element={<MiniDollargraf/>} /> 
+//       <Route path="/options-grafics/Controlinventorygraf" element={<Controlinventorygraf/>} /> 
+//       <Route path="/options-grafics/Headcountgraf" element={<Headcountgraf/>} /> 
+//       <Route path="/staff-principal" element={<Staffprincipal/>} /> 
+//       <Route path="/staff-formulario" element={<Staffformulario/>} /> 
+//       <Route path="/formulariouser" element={<Formulariouser/>} />
+//       <Route path="/options-staff" element={<OptionsStaff/>} />
 
       
-     </Routes>
+//      </Routes>
 
       
 
-     </div>
-  );
-}
+//      </div>
+//   );
+// }
 
-export default App;
+// export default App;
 
 

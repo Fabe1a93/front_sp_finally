@@ -1,5 +1,5 @@
 import React, { useRef,useState,useEffect } from 'react';
-
+import { Link } from 'react-router-dom';
 import { MenuButton } from '../components/menu-button'
 import { SecButton } from '../components/sec-button';
 import buttonTree from '../assets/static/settings_button.png';
@@ -282,7 +282,7 @@ export function OptionsStaff() {
                              </div>
 
 
-                             <a href="/staff-formulario">Crear una nueva cuenta</a>
+                             <Link to="staffformulario">Crear una nueva cuenta</Link>
                              <div id="resultado"></div>
                         </div>
                     </div>

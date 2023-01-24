@@ -36,7 +36,7 @@ export function OptionsMain() {
   let criticalAreas = [
     {
       text: "Manual Pull",
-      link: "../Manual Pull"
+      link: "../Manualpullreg"
     },
     {
       text: "Planares Modular",

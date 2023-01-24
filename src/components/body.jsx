@@ -1,5 +1,5 @@
-import React, {Link} from 'react';
-
+import React from 'react';
+import { Link } from 'react-router-dom';
 import buttonOne from '../assets/static/button1.png';
 import buttonTwo from '../assets/static/button2.png';
 import buttonTree from '../assets/static/settings_button.png';
@@ -21,12 +21,12 @@ const Body = () => {
   
 
 
-     <a href="/register-options" ><PrincipalButton src={buttonOne} alt='button 1' /></a>
+     <Link to="registeroptions" ><PrincipalButton src={buttonOne} alt='button 1' /></Link>
      
-     <a href="/options-grafics"><PrincipalButton src={buttonTwo} alt='button 2' /></a>
+     <Link to="optionsgrafics"><PrincipalButton src={buttonTwo} alt='button 2' /></Link> 
 
      
-     <a href='/options-staff'><img src={buttonTree} alt='button 3' style={{ height: '5vw', width:'5vw', position:'absolute', right:'1vw', top: '39vw' }}/></a>
+     <Link to="optionsstaff"><img src={buttonTree} alt='button 3' style={{ height: '5vw', width:'5vw', position:'absolute', right:'1vw', top: '39vw' }}/></Link>
 
     </div>
     </>

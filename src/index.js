@@ -1,7 +1,7 @@
  import './assets/styles/main.scss';
 // import React from 'react'; 
 // import ReactDOM from 'react-dom/client';
-// import App from './components/App';
+//import App from './components/App';
  
 
 import React from "react";
@@ -10,6 +10,7 @@ import {
   createBrowserRouter,
   RouterProvider,
   Route,
+  Routes,
   Link,
 } from "react-router-dom";
 
@@ -93,7 +94,7 @@ const router = createBrowserRouter([
     element: <div>About</div>,
   },
   {
-    path: "/register-options",
+    path: "registeroptions",
     element: (      
       <>
       <div style={{ backgroundImage: `url(${fondoimg})`,backgroundSize: "cover",height: "965px" }}>
@@ -104,11 +105,11 @@ const router = createBrowserRouter([
     ),
   },
   {
-    path: "/register-options",
+    path: "registeroptions",
     element: <div>About</div>,
   },
   {
-    path: "/options-grafics",
+    path: "optionsgrafics",
     element: (      
       <>
       <div style={{ backgroundImage: `url(${fondoimg})`,backgroundSize: "cover",height: "965px" }}>
@@ -119,7 +120,7 @@ const router = createBrowserRouter([
     ),
   },
   {
-    path: "/options-grafics",
+    path: "optionsgrafics",
     element: <div>Options Grafics</div>,
   },
   {
@@ -828,7 +829,7 @@ const router = createBrowserRouter([
     element: <div>Staffprincipal</div>,
   },
   {
-    path: "staff-formulario",
+    path: "optionsstaff/staffformulario",
     element: (      
       <>
       <div style={{ backgroundImage: `url(${fondoimg})`,backgroundSize: "cover",height: "965px" }}>
@@ -839,7 +840,7 @@ const router = createBrowserRouter([
     ),
   },
   {
-    path: "staff-formulario",
+    path: "optionsstaff/staffformulario",
     element: <div>Staffformulario</div>,
   },
   {
@@ -858,7 +859,7 @@ const router = createBrowserRouter([
     element: <div>Formulariouser</div>,
   },
   {
-    path: "options-staff",
+    path: "optionsstaff",
     element: (      
       <>
       <div style={{ backgroundImage: `url(${fondoimg})`,backgroundSize: "cover",height: "965px" }}>
@@ -869,7 +870,7 @@ const router = createBrowserRouter([
     ),
   },
   {
-    path: "options-staff",
+    path: "optionsstaff",
     element: <div>OptionsStaff</div>,
   },
 ]);
@@ -879,18 +880,18 @@ createRoot(document.getElementById("app")).render(
 );
 
 
-// const root = ReactDOM.createRoot(
-//   document.getElementById('app')
-// );
+const root = ReactDOM.createRoot(
+  document.getElementById('app')
+);
 
-// const element = (
-//     <React.StrictMode>
-//       <App/>
-//     </React.StrictMode>
-// );
+const element = (
+    <React.StrictMode>      
+      <App/>
+    </React.StrictMode>
+);
 
 
-//   root.render(element);
+  root.render(element);
 
 
 
